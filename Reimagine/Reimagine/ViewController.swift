@@ -16,6 +16,19 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func savePhoto(_ sender: Any) {
+        do {
+            guard let flights = try? HttpRequester.init().makeGETHTTPRequest(urlString: "https://flight-engine-behack2019.herokuapp.com/flights?date=2019-09-06&origin=lax&destination=dfw") else {
+                return
+            }
+            //print resposnse and handle response
+            print(flights[0].flightNumber)
+        }catch {
+            //throw error
+        }
+        
+    }
+    
     @IBAction func takePhotoButton(_ sender: Any) {
         
         let imagePickerController = UIImagePickerController()
