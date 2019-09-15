@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10545796232E0B610005BD71 /* ItemTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10545795232E0B610005BD71 /* ItemTypeEnum.swift */; };
 		6D27DDA9232DD77A009130A6 /* HttpRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D27DDA8232DD77A009130A6 /* HttpRequester.swift */; };
 		6D27DDAB232DE633009130A6 /* BaggageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D27DDAA232DE633009130A6 /* BaggageItem.swift */; };
 		6D27DDAD232DE88F009130A6 /* Flights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D27DDAC232DE88F009130A6 /* Flights.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10545795232E0B610005BD71 /* ItemTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTypeEnum.swift; sourceTree = "<group>"; };
 		6D27DDA8232DD77A009130A6 /* HttpRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequester.swift; sourceTree = "<group>"; };
 		6D27DDAA232DE633009130A6 /* BaggageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaggageItem.swift; sourceTree = "<group>"; };
 		6D27DDAC232DE88F009130A6 /* Flights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flights.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				6D27DDA8232DD77A009130A6 /* HttpRequester.swift */,
 				6D27DDAA232DE633009130A6 /* BaggageItem.swift */,
 				6D27DDAC232DE88F009130A6 /* Flights.swift */,
+				10545795232E0B610005BD71 /* ItemTypeEnum.swift */,
 			);
 			path = Reimagine;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D27DDA9232DD77A009130A6 /* HttpRequester.swift in Sources */,
+				10545796232E0B610005BD71 /* ItemTypeEnum.swift in Sources */,
 				6D27DDAB232DE633009130A6 /* BaggageItem.swift in Sources */,
 				6D27DDAD232DE88F009130A6 /* Flights.swift in Sources */,
 				6D2BB7FD232DA74500AC1764 /* ViewController.swift in Sources */,

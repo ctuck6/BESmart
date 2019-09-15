@@ -17,16 +17,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func savePhoto(_ sender: Any) {
-        do {
-            guard let flights = try? HttpRequester.init().makeGETHTTPRequest(urlString: "https://flight-engine-behack2019.herokuapp.com/flights?date=2019-09-06&origin=lax&destination=dfw") else {
-                return
-            }
-            //print resposnse and handle response
-            print(flights[0].flightNumber)
-        }catch {
-            //throw error
+        guard let flights = try? HttpRequester.init().makeGETHTTPRequest(urlString: "https://flight-engine-behack2019.herokuapp.com/flights?date=2019-09-06&origin=lax&destination=dfw") else {
+            return
         }
+        //print resposnse and handle response
+        print(flights[0].flightNumber)
         
+        //create and present alert
+        let alertController = getAlert(type: getItemType(type: "bottle"))
+        present(alertController, animated: true)
     }
     
     @IBAction func takePhotoButton(_ sender: Any) {
@@ -73,6 +72,58 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }
-
+    
+    func getItemType(type: String) -> ItemType{
+        if (type == "bottle" || type == "toothpaste" || type == "water") {
+            return .liquidItem
+        } else if (type == "food" || type == "fruit") {
+            return .foodItem
+        }  else if (type == "knife" || type == "gun") {
+            return .dangerousItem
+        } else {
+            return .validItem
+        }
+    }
+    
+    // get Alert based on type
+    func getAlert(type: ItemType) -> UIAlertController {
+        switch type {
+        case .liquidItem:
+            let title = "Liquid Item Detected"
+            let message = "Liquids over 3.4 ounces (100ml) are prohibited in carry on baggage"
+            return createAlert(title: title, message: message)
+        case .foodItem:
+            let title = "Food Item Detected"
+            let message = "Food Items will be asked to be placed outside of carry-on luggage when going through security"
+            return createAlert(title: title, message: message)
+        case .dangerousItem:
+            let title = "Dangerous Item Detected"
+            let message = "Sharp objects, Guns, Self-Defense Items(pepper spray), tools are prohibited in carry-on luggage"
+            return createAlert(title: title, message: message)
+        case .validItem:
+            return createAlert(title: "Valid Item", message: "Your good to go!")
+        default:
+            return createAlert(title: "Valid Item", message: "Your good to go!")
+        }
+    }
+    
+    // create general alert
+    func createAlert(title: String, message: String) -> UIAlertController {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        // create a cancel action
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+            // handle cancel response here. Doing nothing will dismiss the view.
+        }
+        // add the cancel action to the alertController
+        alertController.addAction(cancelAction)
+        
+        // create an OK action
+        let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
+            // handle response here.
+        }
+        // add the OK action to the alert controller
+        alertController.addAction(OKAction)
+        return alertController
+    }
 }
 
