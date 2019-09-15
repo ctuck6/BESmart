@@ -9,11 +9,13 @@
 import Foundation
 import UIKit
 
-class PaymentViewController: UIViewController
+class PaymentViewController: UIViewController ,UITextFieldDelegate
 {
     var price : [Double] = []
     @IBOutlet weak var price_tag: UILabel!
     
+    @IBOutlet weak var CardNumerEntry: UITextField!
+    @IBOutlet weak var roundedButton: UIButton!
     @IBOutlet weak var PaymentButton: UIButton!
     
     override func viewDidLoad(){
@@ -22,6 +24,7 @@ class PaymentViewController: UIViewController
         price_tag?.text = the_label
         customizeButton01(buttonName: PaymentButton)
     }
+    
     func customizeButton01(buttonName:UIButton)
     {
         let c1GreenColor = (UIColor(red: 23, green: 45, blue: 15, alpha: 1.0))
@@ -36,5 +39,15 @@ class PaymentViewController: UIViewController
         buttonName.layer.shadowRadius = 12
         buttonName.layer.shadowOffset = CGSize(width: 1, height: 1)
         
+    }
+    @IBAction func confirmPay(_ sender: Any) {
+        let alertController = UIAlertController(title: "Payment Confirmed", message: "", preferredStyle: .alert)
+        // create an OK action
+        let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
+            // handle response here.
+        }
+        // add the OK action to the alert controller
+        alertController.addAction(OKAction)
+        present(alertController, animated: true)
     }
 }
