@@ -16,6 +16,9 @@
 		6D2BB800232DA74500AC1764 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D2BB7FE232DA74500AC1764 /* Main.storyboard */; };
 		6D2BB802232DA74700AC1764 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D2BB801232DA74700AC1764 /* Assets.xcassets */; };
 		6D2BB805232DA74700AC1764 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D2BB803232DA74700AC1764 /* LaunchScreen.storyboard */; };
+		F5B6F32C232E172B0080AAED /* FoodListScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B6F32B232E172B0080AAED /* FoodListScreenViewController.swift */; };
+		F5B6F32E232E173C0080AAED /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B6F32D232E173C0080AAED /* ItemCell.swift */; };
+		F5B6F330232E174B0080AAED /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B6F32F232E174B0080AAED /* Image.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		6D2BB801232DA74700AC1764 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D2BB804232DA74700AC1764 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D2BB806232DA74700AC1764 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5B6F32B232E172B0080AAED /* FoodListScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodListScreenViewController.swift; path = ../../../../FoodSideUi/FoodSideUi/FoodListScreenViewController.swift; sourceTree = "<group>"; };
+		F5B6F32D232E173C0080AAED /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemCell.swift; path = ../../../../FoodSideUi/FoodSideUi/ItemCell.swift; sourceTree = "<group>"; };
+		F5B6F32F232E174B0080AAED /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Image.swift; path = ../../../../FoodSideUi/FoodSideUi/Image.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,9 @@
 			children = (
 				6D2BB7FA232DA74500AC1764 /* AppDelegate.swift */,
 				6D2BB7FC232DA74500AC1764 /* ViewController.swift */,
+				F5B6F32B232E172B0080AAED /* FoodListScreenViewController.swift */,
+				F5B6F32D232E173C0080AAED /* ItemCell.swift */,
+				F5B6F32F232E174B0080AAED /* Image.swift */,
 				6D2BB7FE232DA74500AC1764 /* Main.storyboard */,
 				6D2BB801232DA74700AC1764 /* Assets.xcassets */,
 				6D2BB803232DA74700AC1764 /* LaunchScreen.storyboard */,
@@ -147,6 +156,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5B6F32E232E173C0080AAED /* ItemCell.swift in Sources */,
+				F5B6F330232E174B0080AAED /* Image.swift in Sources */,
+				F5B6F32C232E172B0080AAED /* FoodListScreenViewController.swift in Sources */,
 				6D27DDA9232DD77A009130A6 /* HttpRequester.swift in Sources */,
 				10545796232E0B610005BD71 /* ItemTypeEnum.swift in Sources */,
 				6D27DDAB232DE633009130A6 /* BaggageItem.swift in Sources */,
