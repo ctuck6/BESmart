@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D27DDA9232DD77A009130A6 /* HttpRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D27DDA8232DD77A009130A6 /* HttpRequester.swift */; };
+		6D27DDAB232DE633009130A6 /* BaggageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D27DDAA232DE633009130A6 /* BaggageItem.swift */; };
+		6D27DDAD232DE88F009130A6 /* Flights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D27DDAC232DE88F009130A6 /* Flights.swift */; };
 		6D2BB7FB232DA74500AC1764 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2BB7FA232DA74500AC1764 /* AppDelegate.swift */; };
 		6D2BB7FD232DA74500AC1764 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2BB7FC232DA74500AC1764 /* ViewController.swift */; };
 		6D2BB800232DA74500AC1764 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D2BB7FE232DA74500AC1764 /* Main.storyboard */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6D27DDA8232DD77A009130A6 /* HttpRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequester.swift; sourceTree = "<group>"; };
+		6D27DDAA232DE633009130A6 /* BaggageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaggageItem.swift; sourceTree = "<group>"; };
+		6D27DDAC232DE88F009130A6 /* Flights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flights.swift; sourceTree = "<group>"; };
 		6D2BB7F7232DA74500AC1764 /* Reimagine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reimagine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D2BB7FA232DA74500AC1764 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D2BB7FC232DA74500AC1764 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +66,9 @@
 				6D2BB801232DA74700AC1764 /* Assets.xcassets */,
 				6D2BB803232DA74700AC1764 /* LaunchScreen.storyboard */,
 				6D2BB806232DA74700AC1764 /* Info.plist */,
+				6D27DDA8232DD77A009130A6 /* HttpRequester.swift */,
+				6D27DDAA232DE633009130A6 /* BaggageItem.swift */,
+				6D27DDAC232DE88F009130A6 /* Flights.swift */,
 			);
 			path = Reimagine;
 			sourceTree = "<group>";
@@ -135,6 +144,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D27DDA9232DD77A009130A6 /* HttpRequester.swift in Sources */,
+				6D27DDAB232DE633009130A6 /* BaggageItem.swift in Sources */,
+				6D27DDAD232DE88F009130A6 /* Flights.swift in Sources */,
 				6D2BB7FD232DA74500AC1764 /* ViewController.swift in Sources */,
 				6D2BB7FB232DA74500AC1764 /* AppDelegate.swift in Sources */,
 			);
