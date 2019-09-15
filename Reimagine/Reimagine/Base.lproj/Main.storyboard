@@ -135,7 +135,7 @@
                                         <connections>
                                             <outlet property="ItemImageView" destination="7mO-ol-v7M" id="05i-Ty-33e"/>
                                             <outlet property="ItemTitleLabel" destination="Arx-lb-nAT" id="ylg-kO-0hP"/>
-                                            <segue destination="4i8-je-fUS" kind="show" id="Mxt-wl-led"/>
+                                            <segue destination="4i8-je-fUS" kind="show" identifier="price" id="Mxt-wl-led"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -162,27 +162,49 @@
         <!--Payment-->
         <scene sceneID="ukO-61-tPP">
             <objects>
-                <viewController id="4i8-je-fUS" sceneMemberID="viewController">
+                <viewController id="4i8-je-fUS" customClass="PaymentViewController" customModule="Reimagine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QDM-92-0HT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swR-zn-whg">
-                                <rect key="frame" x="129" y="162" width="117" height="109"/>
+                                <rect key="frame" x="70" y="137" width="234" height="218"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8J-wT-ddz">
+                                <rect key="frame" x="80" y="326" width="224" height="146"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="PAY"/>
+                                <connections>
+                                    <action selector="PaymentButton:" destination="4i8-je-fUS" eventType="touchUpInside" id="wEt-c9-4uk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="00m-CZ-zOm">
+                                <rect key="frame" x="80" y="326" width="224" height="146"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="PAY"/>
+                                <connections>
+                                    <action selector="PaymentButton:" destination="4i8-je-fUS" eventType="touchUpInside" id="A2s-ME-rap"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="mlB-OL-W5c"/>
                     </view>
                     <navigationItem key="navigationItem" title="Payment" id="Y1E-3u-rEy"/>
+                    <connections>
+                        <outlet property="PaymentButton" destination="00m-CZ-zOm" id="UdB-tV-7Mw"/>
+                        <outlet property="price_tag" destination="swR-zn-whg" id="Jiy-hf-iaU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yea-Sg-rdc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="818" y="1628"/>
+            <point key="canvasLocation" x="816.79999999999995" y="1627.7361319340332"/>
         </scene>
         <!--Item-->
         <scene sceneID="fpx-UY-2TL">
